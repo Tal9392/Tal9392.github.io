@@ -34,9 +34,12 @@ $(() => {
         }
 
         $('.btn-info').click(function () {
-         
+            const spiner = ` 
+                <div class="spinner-border"></div>
+            `;
             const id = $(this).attr('id');
-            
+            $(`#${id}-info`).append(spiner);
+
             getAjaxData(`https://api.coingecko.com/api/v3/coins/${id}`, info => displayInfo(info));
         });
     }
@@ -60,6 +63,13 @@ function displayInfo(info) {
     $('#' + info.id + '-info').append(moreInfo);
 }
 
+$('.btn').on('click', function() {
+    var $this = $(this);
+    $this.button('loading');
+    setTimeout(function() {
+       $this.button('reset');
+   }, 3000);
+});
 
 
 });
