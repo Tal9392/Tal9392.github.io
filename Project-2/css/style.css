@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+    height: 100rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+.parallax {
+    /* The image used */
+    position: relative;
+    background-image: url("../images/hero-bg.jpg");
+    /* Set a specific height */
+    min-height: 80rem; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+ .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
+ }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    padding: 2rem;
+    width: 8rem;
+  }
+
+  .navigation {
+    background-color: #3a3a41;
+    position: sticky;
+  }
+
+.navigation__list{
+    list-style: none;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .navigation__item {
+      padding: 1rem;
+  }
+
+  .navigation__link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+  }
+
+  .title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+
+  .title-box > h1 {
+    font-size: 8rem;
+    color: #fff;
+    opacity: 0.8;
+    background-color: #3a3a41;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    color: white;
+    width: 28%;
+    border: 1px solid black;
+    margin: 2rem 0;
+    height: 100%;
+    padding: 1rem 2rem;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .info {
+    margin-top: 3rem;
+  }
+
+  .info > img {
+    float: left;
+  }
+
+  .symbol {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .currency-name {
+    font-size: 1.6rem;
+  }
+
+
+  .btn-info {
+    width: 10rem;
+    background-color: #007bff;
+    border: none;
+    padding: 1rem;
+  }
+
+  .price-list {
+    list-style: none;
+    padding-left: 10rem;
+  }
+
+  .spinner {
+    display: inline-block;
+    opacity: 0;
+    max-width: 0;
+    -webkit-transition: opacity 0.25s, max-width 0.45s;
+    -moz-transition: opacity 0.25s, max-width 0.45s;
+    -o-transition: opacity 0.25s, max-width 0.45s;
+    transition: opacity 0.25s, max-width 0.45s;
+    /* Duration fixed since we animate additional hidden width */
+  }
+  
+  .has-spinner.active {
+    cursor: progress;
+  }
+  
+  .has-spinner.active .spinner {
+    opacity: 1;
+    max-width: 50px;
+    /* More than it will ever come, notice that this affects on animation duration */
+  }
+
